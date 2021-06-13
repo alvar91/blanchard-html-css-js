@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="keywords">
+  <meta name="description" content="description">
+  <title>Blanchard</title>
+  <link rel="preload" href="fonts/opensans-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/simplebar.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <script defer src="js/jquery.js"></script>
+  <script defer src="js/jquery-ui.min.js"></script>
+  <script defer src="https://api-maps.yandex.ru/2.1/?apikey=d94ce110-2bcc-4a76-adc8-e9e829fe0eed&lang=ru_RU"></script>
+  <script defer src="js/simplebar.min.js"></script>
+  <script defer src="js/swiper-bundle.min.js"></script>
+  <script defer src="js/choices.min.js"></script>
+  <script defer src="js/inputmask.min.js"></script>
+  <script defer src="js/just-validate.min.js"> </script>
+  <script defer src="js/popper.min.js"></script>
+  <script defer src="js/tippy-bundle.umd.min.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__primary-wrapper">
+      <div class="container header__container">
+        <div tabindex="0" role="button" aria-label="меню" class="burger">
+          <div class="burger__line"></div>
+          <div class="burger__line"></div>
+          <div class="burger__line"></div>
+        </div>
+        <img src="img/header/logo.svg" alt="Лого сайта" class="logo logo__header">
+        <nav class="header__primary-nav">
+          <ul class="header__primary-nav-list">
+            <li class="header__primary-nav-item"><a href="#about-us" class="header__primary-nav-link">О нас</a>
+            </li>
+            <li class="header__primary-nav-item"><a href="#gallery" class="header__primary-nav-link">Галерея</a>
+            </li>
+            <li class="header__primary-nav-item"><a href="#catalog" class="header__primary-nav-link">Каталог</a>
+            </li>
+            <li class="header__primary-nav-item"><a href="#events" class="header__primary-nav-link">События</a>
+            </li>
+            <li class="header__primary-nav-item"><a href="#edition" class="header__primary-nav-link">Издания</a>
+            </li>
+            <li class="header__primary-nav-item"><a href="#projects" class="header__primary-nav-link">Проекты</a>
+            </li>
+            <li class="header__primary-nav-item"><a href="#contacts" class="header__primary-nav-link">Контакты</a>
+            </li>
+          </ul>
+          <a href="#" aria-label="войти в личный кабинет" class="header__log-in">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="header__log-in-svg">
+              <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 
+                          0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 
+                          0.65 12.35 0 11.5556 0Z" fill="white" />
+            </svg>
+            Войти
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div class="header__secondary-wrapper">
+      <div class="container header__secondary-container">
+        <nav class="header__secondary-nav">
+          <ul class="header__secondary-list">
+            <li tabindex="0" class="header__secondary-item">
+              <h3 class="header__secondary-heading">Реализм</h3>
+              <div class="header__secondary-inner-wrapper" hidden>
+                <ul class="header__secondary-inner-list">
+                  <li class="header__secondary-inner-item"><button
+                      class="header__secondary-inner-btn">Тинторетто</button></li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Фридрих</button>
+                  </li>
+                  <li class="header__secondary-inner-item"><button disabled
+                      class="header__secondary-inner-btn  header__secondary-inner-btn_active">Леонардо</button></li>
+                  <li class="header__secondary-inner-item"><button
+                      class="header__secondary-inner-btn">Верроккьо</button></li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Курбе</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li tabindex="0" class="header__secondary-item">
+              <h3 class="header__secondary-heading">Импрессионизм</h3>
+              <div class="header__secondary-inner-wrapper" hidden>
+                <ul class="header__secondary-inner-list">
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Моне</button>
+                  </li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Сислей</button>
+                  </li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Мане</button>
+                  </li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Ренуар</button>
+                  </li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Коровин</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li tabindex="0" class="header__secondary-item">
+              <h3 class="header__secondary-heading">Постимпрессионизм</h3>
+              <div class="header__secondary-inner-wrapper" hidden>
+                <ul class="header__secondary-inner-list">
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Ван Гог</button>
+                  </li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Сезанн</button>
+                  </li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Гоген</button>
+                  </li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Сёра</button>
+                  </li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Люс</button></li>
+                </ul>
+              </div>
+            </li>
+            <li tabindex="0" class="header__secondary-item">
+              <h3 class="header__secondary-heading">Авангард</h3>
+              <div class="header__secondary-inner-wrapper" hidden>
+                <ul class="header__secondary-inner-list">
+                  <li class="header__secondary-inner-item"><button
+                      class="header__secondary-inner-btn">Кандинский</button></li>
+                  <li class="header__secondary-inner-item"><button
+                      class="header__secondary-inner-btn">Маринетти</button></li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Малевич</button>
+                  </li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Пикассо</button>
+                  </li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Якулов</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li tabindex="0" class="header__secondary-item">
+              <h3 class="header__secondary-heading">Футуризм</h3>
+              <div class="header__secondary-inner-wrapper" hidden>
+                <ul class="header__secondary-inner-list">
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Карра</button>
+                  </li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Прателла</button>
+                  </li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Северини</button>
+                  </li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Балла</button>
+                  </li>
+                  <li class="header__secondary-inner-item"><button class="header__secondary-inner-btn">Боччони</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+          </ul>
+          <form action="#" method="POST" class="nav-form">
+            <input aria-label="поиск по сайту" type="search" name="search" class="nav-input" maxlength="30"
+              placeholder="Поиск по сайту">
+            <button aria-label="навигация по сайту" type="submit" class="nav-btn">
+              <svg class="svg-search" width="23" height="22" viewBox="0 0 23 22" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="6.8678" height="1.71695"
+                  transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                  fill="white" />
+              </svg>
+            </button>
+            <button aria-label="скрытие навигации по сайту" class="nav-close-btn"></button>
+          </form>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="hero__swiper-container swiper-container">
+      <div class="hero__swiper-wrapper swiper-wrapper">
+        <section id="hero" class="hero hero_first swiper-slide">
+          <div class="container hero__container">
+            <h1 class="main-heading">
+              Прикоснитесь к прекрасному
+            </h1>
+            <p class="hero__text">
+              Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки
+              для новых предложений.
+            </p>
+            <a href="#contacts" class="btn hero__btn">
+              Подписаться на рассылку
+            </a>
+          </div>
+        </section>
+        <section class="hero hero_second swiper-slide">
+          <div class="container hero__container">
+            <h2 class="main-heading">
+              Прикоснитесь к прекрасному
+            </h2>
+            <p class="hero__text">
+              Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки
+              для новых предложений.
+            </p>
+            <a href="#contacts" class="btn hero__btn">
+              Подписаться на рассылку
+            </a>
+          </div>
+        </section>
+        <section class="hero hero_third swiper-slide">
+          <div class="container hero__container">
+            <h2 class="main-heading">
+              Прикоснитесь к прекрасному
+            </h2>
+            <p class="hero__text">
+              Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки
+              для новых предложений.
+            </p>
+            <a href="#contacts" class="btn hero__btn">
+              Подписаться на рассылку
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+    <section id="about-us" class="about-us">
+      <div class="container about-us__container">
+        <h2 class="section-heading about-us__section-heading">
+          О нас
+        </h2>
+        <p class="about-us__text">
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет
+          каждого участника как способного принимать
+          собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако,
+          забывать, что высококачественный прототип будущего проекта
+          влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает,
+          что высокое качество позиционных исследований создаёт необходимость
+          включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса
+          распределения внутренних резервов и ресурсов. В рамках спецификации
+          современных стандартов, действия представителей оппозиции набирают популярность среди определенных
+          слоев населения, а значит, должны быть разоблачены.
+        </p>
+      </div>
+    </section>
+    <section id="gallery" class="gallery">
+      <div class="container gallery__container">
+        <div class="gallery__wrapper-left">
+          <h2 class="section-heading gallery__section-heading">
+            Галерея
+          </h2>
+          <span class="gallery__filter">
+            Фильтровать по:
+          </span>
+          <div class="gallery__selects">
+            <select class="gallery__select">
+              <option selected disabled class="gallery__option">Автор</option>
+              <option class="gallery__option">Тинторетто</option>
+              <option class="gallery__option">Фридрих</option>
+              <option class="gallery__option">Леонардо</option>
+            </select>
+            <select class="gallery__select">
+              <option selected disabled value="Направление" class="gallery__option">Направление</option>
+              <option class="gallery__option">Реализм</option>
+              <option class="gallery__option">Импрессионизм</option>
+              <option class="gallery__option">Постимпрессионизм</option>
+            </select>
+            <select class="gallery__select">
+              <option selected disabled value="Техника" class="gallery__option">Техника</option>
+              <option class="gallery__option">Масло</option>
+              <option class="gallery__option">Акрил</option>
+              <option class="gallery__option">Акварель</option>
+
+            </select>
+          </div>
+          <p class="gallery__text">
+            Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
+            <a href="#" class="gallery__link">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+          </p>
+        </div>
+        <div class="gallery__wrapper-right swiper-container">
+          <div class="pagination gallery__pagination">
+            <span tabindex="0" role="button"
+              class="pagination-round_prev pagination-round gallery__pagination-round"></span>
+            <span class="pagination__number"></span>
+            <span tabindex="0" role="button"
+              class="pagination-round_next pagination-round gallery__pagination-round"></span>
+          </div>
+          <ul class="gallery__list swiper-wrapper">
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/main/1.webp" alt="картина"
+                class="gallery__picture"></li>
+            <li class="gallery__item swiper-slide"><a class="gallery__pop-up-link" href="#pop-up_second">
+                <img src="img/section-gallery/main/2.webp" alt="картина" class="gallery__picture">
+              </a></li>
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/main/3.webp" alt="картина"
+                class="gallery__picture"></li>
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/main/4.webp" alt="картина"
+                class="gallery__picture"></li>
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/main/5.webp" alt="картина"
+                class="gallery__picture"></li>
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/main/6.webp" alt="картина"
+                class="gallery__picture"></li>
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/second/1.webp"
+                alt="картина" class="gallery__picture"></li>
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/second/2.webp"
+                alt="картина" class="gallery__picture"></li>
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/second/3.webp"
+                alt="картина" class="gallery__picture"></li>
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/second/4.webp"
+                alt="картина" class="gallery__picture"></li>
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/second/5.webp"
+                alt="картина" class="gallery__picture"></li>
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/second/6.webp"
+                alt="картина" class="gallery__picture"></li>
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/second/7.webp"
+                alt="картина" class="gallery__picture"></li>
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/second/8.webp"
+                alt="картина" class="gallery__picture"></li>
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/second/9.webp"
+                alt="картина" class="gallery__picture"></li>
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/second/10.webp"
+                alt="картина" class="gallery__picture"></li>
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/second/11.webp"
+                alt="картина" class="gallery__picture"></li>
+            <li class="gallery__item swiper-slide"><img tabindex="0" src="img/section-gallery/second/12.webp"
+                alt="картина" class="gallery__picture"></li>
+          </ul>
+        </div>
+        <p class="gallery__text gallery__text_visible-tablet">
+          Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
+          <a href="#" class="gallery__link">авторизуйтесь</a>, либо воспользуйтесь лицензией.
+        </p>
+      </div>
+    </section>
+    <section id="catalog" class="catalog">
+      <div class="container" id="tabs">
+        <div class="catalog__wrapper">
+          <h2 class="section-heading catalog__section-heading">
+            Каталог
+          </h2>
+          <ul class="catalog__list-countries">
+            <li class="catalog__item-country">
+              <a aria-label="Франция" href="#france" class="catalog__btn-country catalog__btn-country_france"></a>
+            </li>
+            <li class="catalog__item-country">
+              <a aria-label="Германия" href="#germany" class="catalog__btn-country catalog__btn-country_germany"></a>
+            </li>
+            <li class="catalog__item-country catalog__item-country_active">
+              <a aria-label="Италия" href="#italy" class="catalog__btn-country catalog__btn-country_italy"></a>
+            </li>
+            <li class="catalog__item-country">
+              <a aria-label="Россия" href="#russia" class="catalog__btn-country catalog__btn-country_russia"></a>
+            </li>
+            <li class="catalog__item-country">
+              <a aria-label="Бельгия" href="#belgium" class="catalog__btn-country catalog__btn-country_belgium"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="catalog__wrapper-country" id="italy">
+          <p class="catalog__text">
+            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского
+            типа политической культуры, будут объявлены нарушающими общечеловеческие
+            нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное
+            производство, нанотехнологии и по сей день остаются уделом либералов,
+            которые жаждут быть функционально разнесены на независимые элементы.
+          </p>
+          <div class="catalog__content-wrapper">
+            <div class="catalog__person catalog__person_active" data-target="Доменико-Гирландайо">
+              <img tabindex="0" src="img/section-catalog/1.webp" alt="Доменико-Гирландайо" class="catalog__person-img">
+              <h3 class="catalog__person-name">Доменико Гирландайо</h3>
+              <span class="catalog__person-date">2 июня 1448 — 11 января 1494.</span>
+              <p class="catalog__person-info">Один из ведущих флорентийских художников Кватроченто, основатель
+                художественной династии, которую продолжили его брат Давид и
+                сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года
+                овладевал профессиональными навыками. Автор фресковых циклов, в которых
+                выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их
+                роли выступают знатные граждане Флоренции в костюмах того
+                времени).</p>
+            </div>
+            <div class="catalog__person" data-target="Бенедетто-ди-Биндо">
+              <img tabindex="0" src="img/section-catalog/2.webp" alt="Бенедетто-ди-Биндо" class="catalog__person-img">
+              <h3 class="catalog__person-name">Бенедетто ди Биндо</h3>
+              <span class="catalog__person-date">около 1380—85 — 19 сентября 1417</span>
+              <p class="catalog__person-info">
+                Бенедетто ди Биндо остался в истории искусства как сиенский художник, так сказать, «второго ряда»,
+                несмотря на то, что за свою короткую жизнь он
+                выполнил ряд весьма престижных заказов, включая работы в Сиенском соборе (работы в главном соборе
+                республики второстепенным художникам не поручались). Обучение он прошёл у
+                Таддео ди Бартоло, крупного сиенского мастера поздней готики, в боттеге которого Бенедетто трудился
+                вместе
+                с Грегорио ди Чекко. Наибольшее влияние на его творчество оказали
+                работы Симоне Мартини, в частности в выборе колорита, а тонко проработанные лица его персонажей
+                напоминают
+                произведения Джованни да Милано.</p>
+            </div>
+            <div class="catalog__person" data-target="Парентино-Бернардо">
+              <img tabindex="0" src="img/section-catalog/3.webp" alt="Парентино-Бернардо" class="catalog__person-img">
+              <h3 class="catalog__person-name">Бернардо Парентино</h3>
+              <span class="catalog__person-date">около 1437 - 28 октября 1531</span>
+              <p class="catalog__person-info">Бернардо Парентино написал Сцены жизни святого Бенедикта для монастыря
+                святой Жустины в Падуе и Рождество, которое находится в галерее
+                Академии в Венеции. Также он создал Искушение святого Антония — ряд связанных общей темой картин,
+                которые
+                находятся в галерее Дориа-Памфили.
+                Ему принадлежит также работа Поклонение волхвов. Для манеры художника характерно сильное внимание к
+                деталям.</p>
+            </div>
+            <ul class="catalog__content-list">
+              <li class="catalog__content-item catalog__content-item_active">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1400 по 1499 гг.</h3>
+                  <span role="button" aria-label="раскрытие списка художников" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list">
+                  <li class="catalog__content-dropdown-item">
+                    <ul class="catalog__content-dropdown-list">
+                      <li class="catalog__content-inner-item">
+                        <button class="catalog__content-person" data-path="Бенедетто-ди-Биндо">Бенедетто ди
+                          Биндо</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Бергоньоне, Амброджо</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Биссоло, Франческо</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Больтраффио, Джованни</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Бонсиньори, Франческо</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Боттичини, Рафаэлло</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Брамантино</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Бреа, Людовико</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Бьяджо д’Антонио Туччи</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Веккьетта</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Андреа Верроккьо</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button class="catalog__content-person catalog__content-person_active"
+                          data-path="Доменико-Гирландайо">Доменико Гирландайо</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Беноццо Гоццоли</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Граначчи, Франческо</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Грегорио ди Чекко</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Джованни да Удине</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Джованни ди Паоло</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Джорджоне</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button class="catalog__content-person" data-path="Парентино-Бернардо">Парентино,
+                          Бернардо</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Пезеллино</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Пьетро Перуджино</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Перуцци, Бальдассаре</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Пизанелло</button>
+                      </li>
+                      <li class="catalog__content-inner-item">
+                        <button aria-disabled="true" class="catalog__content-person">Пинтуриккьо</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1500 по 1599 гг.</h3>
+                  <span role="button" aria-label="раскрытие списка художников" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1600 по 1699 гг.</h3>
+                  <span role="button" aria-label="раскрытие списка художников" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1700 по 1799 гг.</h3>
+                  <span role="button" aria-label="раскрытие списка художников" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1900 по 1999 гг.</h3>
+                  <span role="button" aria-label="раскрытие списка художников" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1800 по 1899 гг.</h3>
+                  <span role="button" aria-label="раскрытие списка художников" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item  catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 2000 г.</h3>
+                  <span role="button" aria-label="раскрытие списка художников" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item  catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog__wrapper-country" id="france">
+          <p class="catalog__text">
+            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского
+            типа политической культуры, будут объявлены нарушающими общечеловеческие
+            нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное
+            производство, нанотехнологии и по сей день остаются уделом либералов,
+            которые жаждут быть функционально разнесены на независимые элементы.
+          </p>
+          <div class="catalog__content-wrapper">
+            <div class="catalog__person catalog__person_renovation">
+              <p class="catalog__person-info catalog__person-info-renovation"> Просим прощения. Раздел обновляется...
+              </p>
+            </div>
+            <ul class="catalog__content-list">
+              <li class="catalog__content-item catalog__content-item_active">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1400 по 1499 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1500 по 1599 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1600 по 1699 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1700 по 1799 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1900 по 1999 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1800 по 1899 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item  catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 2000 г.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item  catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog__wrapper-country" id="germany">
+          <p class="catalog__text">
+            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского
+            типа политической культуры, будут объявлены нарушающими общечеловеческие
+            нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное
+            производство, нанотехнологии и по сей день остаются уделом либералов,
+            которые жаждут быть функционально разнесены на независимые элементы.
+          </p>
+          <div class="catalog__content-wrapper">
+            <div class="catalog__person catalog__person_renovation">
+              <p class="catalog__person-info catalog__person-info-renovation"> Просим прощения. Раздел обновляется...
+              </p>
+            </div>
+            <ul class="catalog__content-list">
+              <li class="catalog__content-item catalog__content-item_active">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1400 по 1499 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1500 по 1599 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1600 по 1699 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1700 по 1799 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1900 по 1999 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1800 по 1899 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item  catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 2000 г.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item  catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog__wrapper-country" id="russia">
+          <p class="catalog__text">
+            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского
+            типа политической культуры, будут объявлены нарушающими общечеловеческие
+            нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное
+            производство, нанотехнологии и по сей день остаются уделом либералов,
+            которые жаждут быть функционально разнесены на независимые элементы.
+          </p>
+          <div class="catalog__content-wrapper">
+            <div class="catalog__person catalog__person_renovation">
+              <p class="catalog__person-info catalog__person-info-renovation"> Просим прощения. Раздел обновляется...
+              </p>
+            </div>
+            <ul class="catalog__content-list">
+              <li class="catalog__content-item catalog__content-item_active">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1400 по 1499 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1500 по 1599 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1600 по 1699 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1700 по 1799 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1900 по 1999 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1800 по 1899 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item  catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 2000 г.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item  catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog__wrapper-country" id="belgium">
+          <p class="catalog__text">
+            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского
+            типа политической культуры, будут объявлены нарушающими общечеловеческие
+            нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное
+            производство, нанотехнологии и по сей день остаются уделом либералов,
+            которые жаждут быть функционально разнесены на независимые элементы.
+          </p>
+          <div class="catalog__content-wrapper">
+            <div class="catalog__person catalog__person_renovation">
+              <p class="catalog__person-info catalog__person-info-renovation"> Просим прощения. Раздел обновляется...
+              </p>
+            </div>
+            <ul class="catalog__content-list">
+              <li class="catalog__content-item catalog__content-item_active">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1400 по 1499 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1500 по 1599 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1600 по 1699 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1700 по 1799 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1900 по 1999 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 1800 по 1899 гг.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item  catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__content-item">
+                <div tabindex="0" class="catalog__content-inner-wrapper">
+                  <h3 class="catalog__content-date">C 2000 г.</h3>
+                  <span aria-label="раскрытие списка художников" role="button" tabindex="0"
+                    class="catalog__content-round"></span>
+                </div>
+                <ul class="catalog__content-inner-list catalog__content-inner-list_renovation">
+                  <li class="catalog__content-inner-item  catalog__content-inner-item_renovation">
+                    Просим прощения. Раздел обновляется...
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="events" class="events">
+      <div class="container events__container">
+        <h2 class="section-heading events__section-heading">
+          События
+        </h2>
+        <ul class="events__list">
+          <li class="events__item">
+            <article class="events__article">
+              <span class="events__date">Музей им. Щусева с&nbsp;20&nbsp;марта по 30 апреля</span>
+              <h3 class="events__subheading">Книжная гравюра в живом восприятии</h3>
+              <p class="events__text">Один из ведущих флорентийских художников Кватроченто, основатель
+                художественной династии, которую продолжили его брат
+                Давид и сын Ридольфо.</p>
+              <a href="#" class="events__more">Подробнее</a>
+            </article>
+          </li>
+          <li class="events__item">
+            <article class="events__article">
+              <span class="events__date">ММОМА 24&nbsp;марта 19:00</span>
+              <h3 class="events__subheading">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
+              <p class="events__text">Высокий уровень вовлечения представителей целевой аудитории является
+                четким доказательством простого факта.</p>
+              <a href="#" class="events__more">Подробнее</a>
+            </article>
+          </li>
+          <li class="events__item">
+            <article class="events__article">
+              <span class="events__date">Еврейский музей с&nbsp;31&nbsp;марта по 21 апреля</span>
+              <h3 class="events__subheading">Выставка «Формация 2020»</h3>
+              <p class="events__text">Идейные соображения высшего порядка, а также современная методология
+                разработки играет важную роль в формировании
+                глубокомысленных рассуждений.</p>
+              <a href="#" class="events__more">Подробнее</a>
+            </article>
+          </li>
+          <li class="events__item">
+            <article class="events__article">
+              <span class="events__date">Третьяковка на Крымском&nbsp;валу с 30 марта по 30 апреля</span>
+              <h3 class="events__subheading">XXIV Международная биеннале молодого искусства</h3>
+              <p class="events__text">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
+              <a href="#" class="events__more">Подробнее</a>
+            </article>
+          </li>
+          <li class="events__item">
+            <article class="events__article">
+              <span class="events__date">ММАМ с&nbsp;8&nbsp;апреля&nbsp;по&nbsp;20 мая</span>
+              <h3 class="events__subheading">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
+              <p class="events__text">Один из ведущих флорентийских художников Кватроченто, основатель художественной
+                династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+              <a href="#" class="events__more">Подробнее</a>
+            </article>
+          </li>
+        </ul>
+        <button class="btn events__btn">Все события</button>
+      </div>
+    </section>
+    <section id="edition" class="edition">
+      <div class="container edition__container">
+        <div class="edition__wrapper-left">
+          <h2 class="section-heading edition__section-heading">
+            Издания
+          </h2>
+          <form action="#" method="POST" class="edition__form">
+            <h3 class="edition__form-heading">Категории</h3>
+            <div class="edition__wrapper-checkbox">
+              <label tabindex="0" for="best-sellers" class="edition__checkbox-label">Бестселлеры
+                <input type="checkbox" id="best-sellers" class="edition__checkbox">
+                <span class="edition__custom-checkbox"></span>
+              </label>
+              <label tabindex="0" for="art" class="edition__checkbox-label">Искусство
+                <input type="checkbox" id="art" class="edition__checkbox">
+                <span class="edition__custom-checkbox"></span>
+              </label>
+              <label tabindex="0" for="architecture" class="edition__checkbox-label">Архитектура
+                <input type="checkbox" id="architecture" class="edition__checkbox">
+                <span class="edition__custom-checkbox"></span>
+              </label>
+              <label tabindex="0" for="design" class="edition__checkbox-label edition__checkbox-label_active">Дизайн
+                <input type="checkbox" id="design" class="edition__checkbox">
+                <span class="edition__custom-checkbox"></span>
+              </label>
+              <label tabindex="0" for="vouge" class="edition__checkbox-label">Мода
+                <input type="checkbox" id="vouge" class="edition__checkbox">
+                <span class="edition__custom-checkbox"></span>
+              </label>
+              <label tabindex="0" for="children" class="edition__checkbox-label">Детям
+                <input type="checkbox" id="children" class="edition__checkbox">
+                <span class="edition__custom-checkbox"></span>
+              </label>
+              <label tabindex="0" for="fiction" class="edition__checkbox-label">Художественная литература
+                <input type="checkbox" id="fiction" class="edition__checkbox">
+                <span class="edition__custom-checkbox"></span>
+              </label>
+              <label tabindex="0" for="publicism" class="edition__checkbox-label">Публицистика
+                <input type="checkbox" id="publicism" class="edition__checkbox">
+                <span class="edition__custom-checkbox"></span>
+              </label>
+              <label tabindex="0" for="travel-guides" class="edition__checkbox-label">Путеводители
+                <input type="checkbox" id="travel-guides" class="edition__checkbox">
+                <span class="edition__custom-checkbox"></span>
+              </label>
+              <label tabindex="0" for="philosophy" class="edition__checkbox-label">Философия
+                <input type="checkbox" id="philosophy" class="edition__checkbox">
+                <span class="edition__custom-checkbox"></span>
+              </label>
+              <label tabindex="0" for="education" class="edition__checkbox-label">Учебная литература
+                <input type="checkbox" id="education" class="edition__checkbox">
+                <span class="edition__custom-checkbox"></span>
+              </label>
+              <label tabindex="0" for="newspaper" class="edition__checkbox-label">Журналы и газеты
+                <input type="checkbox" id="newspaper" class="edition__checkbox">
+                <span class="edition__custom-checkbox"></span>
+              </label>
+            </div>
+            <h4 class="edition__form-heading">Цена</h4>
+            <div class="edition__wrapper-input">От<input aria-label="минимальная цена" class="edition__input"
+                type="number">до
+              <input aria-label="максимальная цена" class="edition__input" type="number">руб.
+            </div>
+          </form>
+        </div>
+        <div class="edition__wrapper-right swiper-container">
+          <div class=" pagination edition__pagination">
+            <span role="button" tabindex="0"
+              class="pagination-round pagination-round_prev edition__pagination-round"></span>
+            <span class="pagination__number"></span>
+            <span role="button" tabindex="0"
+              class="pagination-round pagination-round_next edition__pagination-round"></span>
+          </div>
+          <ul class="edition__list swiper-wrapper">
+            <li class="edition__item swiper-slide">
+              <article class="edition__article">
+                <img tabindex="0" src="img/section-edition/main/1.webp" alt="Обложка книги" class="edition__picture">
+                <div class="edition__wrapper-info">
+                  <div class="edition__book">
+                    <h4 class="edition__name"> Искусство цвета</h4>
+                    <span class="edition__author">
+                      Иттен, Иоханнес
+                    </span>
+                  </div>
+                  <span class="edition__price">620 руб</span>
+                </div>
+                <a href="#" class="btn edition__btn">Заказать</a>
+              </article>
+            </li>
+            <li class="edition__item swiper-slide">
+              <article class="edition__article">
+                <img tabindex="0" src="img/section-edition/main/2.webp" alt="Обложка книги" class="edition__picture">
+                <div class="edition__wrapper-info">
+                  <div class="edition__book">
+                    <h4 class="edition__name"> Типографика</h4>
+                    <span class="edition__author">
+                      Рудер, Эмиль
+                    </span>
+                  </div>
+                  <span class="edition__price">2 450 руб</span>
+                </div>
+                <a href="#" class="btn edition__btn">Заказать</a>
+              </article>
+            </li>
+            <li class="edition__item swiper-slide">
+              <article class="edition__article">
+                <img tabindex="0" src="img/section-edition/main/3.webp" alt="Обложка книги" class="edition__picture">
+                <div class="edition__wrapper-info">
+                  <div class="edition__book">
+                    <h4 class="edition__name"> Книга про буквы</h4>
+                    <span class="edition__author">
+                      Гордон, Юрий
+                    </span>
+                  </div>
+                  <span class="edition__price">2 200 руб</span>
+                </div>
+                <a href="#" class="btn edition__btn">Заказать</a>
+              </article>
+            </li>
+            <li class="edition__item swiper-slide">
+              <article class="edition__article">
+                <img tabindex="0" src="img/section-edition/second/1.webp" alt="Обложка книги" class="edition__picture">
+                <div class="edition__wrapper-info">
+                  <div class="edition__book">
+                    <h4 class="edition__name">Николай Ильин</h4>
+                    <span class="edition__author">
+                      Кричевский, Владимир
+                    </span>
+                  </div>
+                  <span class="edition__price">1 100 руб</span>
+                </div>
+                <a href="#" class="btn edition__btn">Заказать</a>
+              </article>
+            </li>
+            <li class="edition__item swiper-slide">
+              <article class="edition__article">
+                <img tabindex="0" src="img/section-edition/second/2.webp" alt="Обложка книги" class="edition__picture">
+                <div class="edition__wrapper-info">
+                  <div class="edition__book">
+                    <h4 class="edition__name"> Модульные сетки в граф...</h4>
+                    <span class="edition__author">
+                      Мюллер-Брокманн, Йозеф
+                    </span>
+                  </div>
+                  <span class="edition__price">1 450 руб</span>
+                </div>
+                <a href="#" class="btn edition__btn">Заказать</a>
+              </article>
+            </li>
+            <li class="edition__item swiper-slide">
+              <article class="edition__article">
+                <img tabindex="0" src="img/section-edition/second/3.webp" alt="Обложка книги" class="edition__picture">
+                <div class="edition__wrapper-info">
+                  <div class="edition__book">
+                    <h4 class="edition__name"> Эволюция графических ст...</h4>
+                    <span class="edition__author">
+                      Хеллер, Чваст
+                    </span>
+                  </div>
+                  <span class="edition__price">3 200 руб</span>
+                </div>
+                <a href="#" class="btn edition__btn">Заказать</a>
+              </article>
+            </li>
+            <li class="edition__item swiper-slide">
+              <article class="edition__article">
+                <img tabindex="0" src="img/section-edition/second/4.webp" alt="Обложка книги" class="edition__picture">
+                <div class="edition__wrapper-info">
+                  <div class="edition__book">
+                    <h4 class="edition__name">Искусство и визуальное в...</h4>
+                    <span class="edition__author">
+                      Арнхейм, Рудольф
+                    </span>
+                  </div>
+                  <span class="edition__price">2 200 руб</span>
+                </div>
+                <a href="#" class="btn edition__btn">Заказать</a>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-heading projects__section-heading">
+          Проекты
+        </h2>
+        <p class="projects__text">
+          Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности
+          однозначно фиксирует необходимость своевременного выполнения
+          сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной
+          неузнаваемости, из-за чего возрастает их статус бесполезности.
+          Прежде всего, постоянное информационно&nbsp;-<span
+            class="active-on-desktop-and-tablet">&nbsp;</span>пропагандистское <span role="contentinfo" tabindex="0"
+            class="tooltip"></span>
+          обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности
+          принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены
+          <span role="contentinfo" tabindex="0" class="tooltip"></span> исключительно в
+          разрезе маркетинговых и финансовых
+          <span role="contentinfo" tabindex="0" class="tooltip"></span>
+          предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных
+          резервов призывают нас к новым свершениям, которые, в свою очередь,
+          должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: <a href="#"
+            class="projects__link">blanchard-art.ru/projects/about</a>
+        </p>
+        <h3 class="projects__subheading">
+          Партнёры проектов:
+        </h3>
+        <div class="projects__container">
+          <span class="pagination-round pagination-round_prev projects__pagination-round"></span>
+          <div class="projects__swiper-wrapper swiper-container">
+            <ul class="projects__list swiper-wrapper">
+              <li tabindex="0" class="projects__item swiper-slide"></li>
+              <li tabindex="0" class="projects__item swiper-slide"></li>
+              <li tabindex="0" class="projects__item swiper-slide"></li>
+              <li tabindex="0" class="projects__item swiper-slide"></li>
+              <li tabindex="0" class="projects__item swiper-slide"></li>
+              <li tabindex="0" class="projects__item swiper-slide"></li>
+              <li tabindex="0" class="projects__item swiper-slide"></li>
+              <li tabindex="0" class="projects__item swiper-slide"></li>
+              <li tabindex="0" class="projects__item swiper-slide"></li>
+            </ul>
+          </div>
+          <span class="pagination-round pagination-round_next projects__pagination-round"></span>
+        </div>
+      </div>
+    </section>
+    <section id="contacts" class="contacts">
+      <div class="container">
+        <h2 class="section-heading contacts__section-heading">
+          Контакты
+        </h2>
+      </div>
+      <span class="grey-line"></span>
+      <div class="container">
+        <div class="contacts__wrapper">
+          <h3 class="contacts__name">Шоурум №4</h3>
+          <address class="contacts__address">Леонтьевский переулок, дом 5, строение 1</address>
+          <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="contacts__form">
+            <h4 class="contacts__form-heading">Заказать обратный звонок</h4>
+            <input aria-label="ввод имени" type="text" class="contacts__form-input" name="name" placeholder="Имя*"
+              data-validate-field="name">
+            <input aria-label="ввод телефонного номера" type="tel" class="contacts__form-input" name="phone"
+              placeholder="Телефон*" data-validate-field="phone">
+            <button type="submit" class="btn contacts__form-btn">Заказать</button>
+          </form>
+          <h4 class="contacts__to-connect">
+            Связаться в один клик
+          </h4>
+          <ul class="contacts__to-connects-list">
+            <li class="contacts__to-connect-item"><a href="#" aria-label="ватсап" class="contacts__to-connect-link"></a>
+            </li>
+            <li class="contacts__to-connect-item"><a href="#" aria-label="телеграм"
+                class="contacts__to-connect-link"></a></li>
+          </ul>
+        </div>
+        <div tabindex="0" role="application" aria-label="карта" class="contacts__map" id="map"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__container">
+      <img src="img/header/logo.svg" alt="Лого сайта" class="footer__logo">
+      <ul class="footer__list">
+        <li class="footer__item"><a href="#" aria-label="вконтакте" class="footer__social-link"></a></li>
+        <li class="footer__item"><a href="#" aria-label="инстаграм" class="footer__social-link"></a></li>
+        <li class="footer__item"><a href="#" aria-label="фейсбук" class="footer__social-link"></a></li>
+      </ul>
+    </div>
+  </footer>
+  <div id="pop-up_second" class="pop-up">
+    <div class="pop-up__body">
+      <div class="pop-up__content">
+        <span class="pop-up__close"></span>
+        <img src="img/section-gallery/popup.webp" alt="картина" class="pop-up__picture">
+        <div class="pop-up__info">
+          <h3 class="pop-up__author">Казимир Малевич</h3>
+          <h4 class="pop-up__name">“Женщина с граблями”</h4>
+          <span class="pop-up__date">1931-1932</span>
+          <p class="pop-up__description">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник
+            принялся за её создание в 1930-1931 годах, после того,
+            как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
